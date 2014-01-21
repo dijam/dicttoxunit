@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-import dicttoxunit
-
 try:
     from setuptools import setup
 except ImportError:
@@ -12,12 +10,12 @@ except ImportError:
 
 setup(
     name='dicttoxunit',
-    version=dicttoxunit.__version__,
+    version='0.0.3',
     description="Convert dictionary to xunit xml format",
-    author=dicttoxunit.__author__,
+    author='Majid Garmaroudi',
     author_email='majid.sadeghi@gmail.com',
-    url='https://github.com/dijam/dictoxunit',
-    license=dicttoxunit.__license__,
+    url='https://github.com/dijam/dicttoxunit',
+    license='MIT',
     platforms=['all'],
     classifiers=[
         'Intended Audience :: Developers',
@@ -31,8 +29,9 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
-        'Topic :: Text Processing :: XUnit :: Markup :: XML',
+        'Topic :: Text Processing :: Markup :: XML'
     ],
+    install_requires=['voluptuous>=0.8.4'],
     py_modules=['dicttoxunit'],
-    setup_requires=['nose>=1.0', 'coverage'],
+    setup_requires=['nose>=1.0']
 )
